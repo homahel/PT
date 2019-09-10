@@ -1,0 +1,36 @@
+//ПРИНЦИПИ ООП
+
+//Cоздаем класс Студент
+
+//Принцип Инкапсуляции. Поле name недоступно извне. 
+//Для достцупа к нему пропишем методы setName и getName
+public class BSTStudent {
+    private String name;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name
+    }
+void info() {
+        System.out.println("BST Student");
+    }
+}
+//Принцип Наследования. Используем для реализации extends
+public class MTUCIStudent extends BSTStudent {
+    private String name;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name
+    }
+void info() {
+        System.out.println("MTUCI Student");
+    }
+//Принцип Полиморфизма. Переопределяем классом MTUCIStudent 
+//поведение метода info класса BSTStudent
+public static void main(String[] arg) {
+        BSTStudent p = new MTUCIStudent ();
+        p. info ();
+}
